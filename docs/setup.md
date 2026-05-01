@@ -662,7 +662,7 @@ This writes a value to a `CurrentVersion\Run` registry key, simulating a persist
 Invoke-AtomicTest T1053.005 -TestNumbers 1
 ```
 
-This creates a scheduled task via command line using `schtasks /create`, simulating attacker-driven persistence or execution scheduling, triggering rule 100013.
+This creates a scheduled task via command line using `schtasks /create`, simulating persistence or execution scheduling, triggering rule 100013.
 
 **Expected result:** Wazuh fires a level 12 alert visible on the dashboard.
 
