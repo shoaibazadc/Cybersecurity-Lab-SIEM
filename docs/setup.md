@@ -397,7 +397,7 @@ Add the following rule group beneath the existing example content:
   <!-- Process Creation w/ Suspicious PowerShell Download -->
   <rule id="100010" level="14">
     <if_group>sysmon_event1</if_group>
-    <field name="win.eventdata.commandLine" type="pcre2">(?i)(Invoke-WebRequest|iwr|Net.WebClient|curl)</field>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)(Invoke-WebRequest|iwr|Net\.WebClient|curl)</field>
     <description>Process creation w/ Suspicious PowerShell download</description>
     <mitre>
       <id>T1105</id>
