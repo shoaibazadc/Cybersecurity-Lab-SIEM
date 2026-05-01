@@ -564,7 +564,6 @@ Host: $exec.text.agent.name ($exec.text.agent.ip)
 Rule: $exec.text.rule.description (ID: $exec.text.rule.id)
 Command: $exec.text.win.eventdata.commandLine
 VirusTotal Score: $run_analyzer.summary.malicious / 72
-Action Taken: Automated isolation pending...
 ```
 
 ---
