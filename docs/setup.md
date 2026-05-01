@@ -652,7 +652,7 @@ Invoke-AtomicTest T1547.001 -TestNumbers 1
 
 This writes a value to a `CurrentVersion\Run` registry key, simulating a persistence mechanism that survives user login, triggering rule 100012.
 
-**Expected result:** Wazuh fires a level 13 alert visible in the dashboard.
+**Expected result:** Wazuh fires a level 13 alert visible on the dashboard.
 
 ---
 
@@ -664,6 +664,6 @@ Invoke-AtomicTest T1053.005 -TestNumbers 1
 
 This creates a scheduled task via command line using `schtasks /create`, simulating attacker-driven persistence or execution scheduling, triggering rule 100013.
 
-**Expected result:** Wazuh fires a level 12 alert visible in the dashboard.
+**Expected result:** Wazuh fires a level 12 alert visible on the dashboard.
 
 > Full execution details and results are documented in [`attack_simulations.md`](attack_simulations.md).
