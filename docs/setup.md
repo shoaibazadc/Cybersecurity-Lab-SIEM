@@ -664,5 +664,3 @@ Invoke-AtomicTest T1053.005 -TestNumbers 1
 This creates a scheduled task via command line using `schtasks /create`, simulating persistence or execution scheduling, triggering rule 100013.
 
 **Expected result:** Wazuh fires a level 12 alert visible on the dashboard.
-
-> Full execution details and results are documented in [`attack_simulations.md`](attack_simulations.md).
