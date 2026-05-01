@@ -4,7 +4,7 @@ Custom Wazuh rules written for this lab, stored in `configs/local_rules.xml`. Al
 
 ---
 
-## Rule 100010 — Suspicious PowerShell Download (T1105)
+## Rule 100010 - Suspicious PowerShell Download (T1105)
 
 **Description**
 Detects process creation events where the command line contains native PowerShell download methods commonly used to retrieve payloads from remote infrastructure during the initial access or execution phase of an attack.
@@ -48,7 +48,7 @@ This rule is tied to the Shuffle SOAR webhook integration. When it fires, the fu
 
 ---
 
-## Rule 100011 — Microsoft Edge Update Suppression
+## Rule 100011 - Microsoft Edge Update Suppression
 
 **Description**
 Suppression rule that silences rule 100010 when the offending process is `MicrosoftEdgeUpdate.exe`. Edge's update mechanism uses the same PowerShell download patterns as the parent rule and would otherwise generate persistent false positives in any environment where Edge is installed.
@@ -86,7 +86,7 @@ None. Level 0 rules do not trigger integrations or webhooks.
 
 ---
 
-## Rule 100012 — Registry Run Key Modification (T1547.001)
+## Rule 100012 - Registry Run Key Modification (T1547.001)
 
 **Description**
 Detects registry value set events targeting `CurrentVersion\Run`, `RunOnce`, or `RunOnceEx` key paths under HKCU. Modification of these keys is a common persistence mechanism that causes attacker-controlled binaries to execute automatically on user login, without requiring elevated privileges.
@@ -130,7 +130,7 @@ None in the current workflow. This rule is not bound to the Shuffle webhook inte
 
 ---
 
-## Rule 100013 — Scheduled Task Creation via Command Line (T1053.005)
+## Rule 100013 - Scheduled Task Creation via Command Line (T1053.005)
 
 **Description**
 Detects process creation events where the command line contains scheduled task creation methods. Scheduled tasks created programmatically rather than through the Windows Task Scheduler GUI are a strong indicator of attacker-driven persistence or execution scheduling. Legitimate software installers occasionally create tasks this way, but it remains a high-value detection point.
