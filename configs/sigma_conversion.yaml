@@ -1,31 +1,9 @@
 title: Suspicious PowerShell Download Command
 id: 79ce2c45-2237-455d-85a9-41ac41d15530
 status: experimental
-description: Detects process creation events where the command line contains common PowerShell download methods used to pull remote payloads.
+description: Detects process creation events where the command line contains common PowerShell download methods used to pull remote payloads. Excludes MicrosoftEdgeUpdate.exe to suppress known false positives.
 references:
     - https://attack.mitre.org/techniques/T1105/
-author: Shoaib Azad
-date: 2026/04/11
-tags:
-    - attack.command_and_control
-    - attack.t1105
-logsource:
-    category: process_creation
-    product: windows
-detection:
-    selection:
-        CommandLine|re: '(?i)(Invoke-WebRequest|iwr|Net\.WebClient|curl)'
-    condition: selection
-falsepositives:
-    - Legitimate administrative scripts using PowerShell download methods
-level: high
-
----
-
-title: Suppression - Microsoft Edge Update False Positive
-id: 33cb6fa6-18fa-42c2-bfac-c3aa49268690
-status: experimental
-description: Suppresses false positives from MicrosoftEdgeUpdate.exe triggering the suspicious PowerShell download rule.
 author: Shoaib Azad
 date: 2026/04/11
 tags:
@@ -41,7 +19,7 @@ detection:
         Image|endswith: '\MicrosoftEdgeUpdate.exe'
     condition: selection and not filter
 falsepositives:
-    - None expected
+    - Legitimate administrative scripts using PowerShell download methods
 level: high
 
 ---
@@ -91,4 +69,4 @@ detection:
     condition: selection
 falsepositives:
     - Legitimate administrative scheduled task creation
-level: medium
+level: high
