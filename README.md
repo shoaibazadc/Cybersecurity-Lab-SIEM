@@ -101,7 +101,6 @@ Cybersecurity-Lab-SIEM/
 │   ├── setup.md                         # Full deployment guide
 │   ├── rules.md                         # Detection rule logic and explanations
 │   ├── attack_simulations.md            # Atomic Red Team execution and results
-│   ├── troubleshooting.md               # Known issues and fixes
 │   └── screenshots/
 │       ├── virtualbox-nat-network-a.png
 │       ├── virtualbox-nat-network-b.png
