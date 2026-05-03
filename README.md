@@ -100,7 +100,6 @@ Cybersecurity-Lab-SIEM/
 │   │   └── network-topology.png
 │   ├── setup.md                         # Full deployment guide
 │   ├── rules.md                         # Detection rule logic and explanations
-│   ├── attack_simulations.md            # Atomic Red Team execution and results
 │   └── screenshots/
 │       ├── virtualbox-nat-network-a.png
 │       ├── virtualbox-nat-network-b.png
