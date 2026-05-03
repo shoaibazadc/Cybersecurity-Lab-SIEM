@@ -106,13 +106,13 @@ Invoke-AtomicTest T1105 -TestNumbers 10
 </rule>
 ```
 
-**Test Command**
+**Test Command:**
 
 ```powershell
 Invoke-AtomicTest T1547.001 -TestNumbers 1
 ```
 
-**Expected Output**
+**Expected Output:**
 
 | Field | Value |
 |-------|-------|
@@ -123,7 +123,8 @@ Invoke-AtomicTest T1547.001 -TestNumbers 1
 | Alert visible in | Wazuh dashboard → Security Events |
 
 **Tuning History**
-No suppressions added. Legitimate software occasionally writes to Run keys during installation. Regex scope is limited to `HKU` to reduce noise from HKLM writes made by system processes during updates.
+- No suppressions added. Legitimate software occasionally writes to Run keys during installation. 
+- Regex scope is limited to `HKU` to reduce noise from HKLM writes made by system processes during updates.
 
 ---
 
