@@ -44,7 +44,7 @@ Invoke-AtomicTest T1105 -TestNumbers 10
 | Rule ID | 100010 |
 | Level | 14 |
 | Group | atomic_red_team |
-| MITRE | T1105 - Ingress Tool Transfer |
+| MITRE | T1105 |
 | Alert visible in | Wazuh dashboard → Security Events |
 
 **Tuning History**
@@ -88,12 +88,12 @@ Invoke-AtomicTest T1105 -TestNumbers 10
 
 ## Rule 100012 - Registry Run Key Modification (T1547.001)
 
-**Description:** Detects registry value set events targeting `CurrentVersion\Run`, `RunOnce`, or `RunOnceEx` key paths under HKCU. Modification of these keys is a common persistence mechanism that causes malicious binaries to execute automatically on user login without requiring elevated privileges.
+**Description:** Detects registry value set events targeting `CurrentVersion\Run`, `RunOnce`, or `RunOnceEx` paths under HKCU. Modification of these keys is a common persistence mechanism that causes malicious binaries to execute automatically on user login without requiring elevated privileges.
 
 **Data Source:**
 - Sysmon Event ID 13 (Registry Value Set)
 
-**Rule**
+**Rule:**
 
 ```xml
 <rule id="100012" level="13">
@@ -117,9 +117,9 @@ Invoke-AtomicTest T1547.001 -TestNumbers 1
 | Field | Value |
 |-------|-------|
 | Rule ID | 100012 |
-| Level | 13 (High) |
-| Group | sysmon_event_13, atomic_red_team |
-| MITRE | T1547.001 - Boot or Logon Autostart: Registry Run Keys |
+| Level | 13 |
+| Group | atomic_red_team |
+| MITRE | T1547.001 |
 | Alert visible in | Wazuh dashboard → Security Events |
 
 **Tuning History**
