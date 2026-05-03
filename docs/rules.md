@@ -57,12 +57,12 @@ Invoke-AtomicTest T1105 -TestNumbers 10
 
 ## Rule 100011 - Microsoft Edge Update Suppression
 
-**Description:** Suppression rule that silences rule 100010 when the offending process is `MicrosoftEdgeUpdate.exe`. Edge's update mechanism invokes PowerShell download methods as part of its update check process and would otherwise generate persistent false positives in any environment where Edge is installed.
+**Description:** Suppression rule for rule 100010 to eliminate false positives from `MicrosoftEdgeUpdate.exe`.
 
-**Data Source**
-- Sysmon Event ID 1 (Process Creation)
+**Data Source:**
+- Inherited from rule 100010 (Sysmon Event ID 1)
 
-**Rule**
+**Rule:**
 
 ```xml
 <rule id="100011" level="0">
@@ -75,7 +75,7 @@ Invoke-AtomicTest T1105 -TestNumbers 10
 **Test Command**
 Allow `MicrosoftEdgeUpdate.exe` to run naturally, or trigger rule 100010 via a process with `MicrosoftEdgeUpdate.exe` as the image path. Rule 100011 should fire at level 0, suppressing the alert.
 
-**Expected Output**
+**Expected Output:**
 
 | Field | Value |
 |-------|-------|
@@ -90,7 +90,7 @@ Allow `MicrosoftEdgeUpdate.exe` to run naturally, or trigger rule 100010 via a p
 
 **Description:** Detects registry value set events targeting `CurrentVersion\Run`, `RunOnce`, or `RunOnceEx` key paths under HKCU. Modification of these keys is a common persistence mechanism that causes malicious binaries to execute automatically on user login without requiring elevated privileges.
 
-**Data Source**
+**Data Source:**
 - Sysmon Event ID 13 (Registry Value Set)
 
 **Rule**
