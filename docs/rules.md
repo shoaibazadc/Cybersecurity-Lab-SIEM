@@ -170,4 +170,4 @@ No suppressions added at this stage. Known false positive sources include softwa
 
 ## Sigma Conversion
 
-All rules above have been converted to Sigma format for portability across SIEM platforms. Converted rules are stored in [`configs/sigma_conversion.yaml`](../configs/sigma_conversion.yaml).
+All rules above have been converted to Sigma format, stored in [`configs/sigma_conversion.yaml`](../configs/sigma_conversion.yaml).
