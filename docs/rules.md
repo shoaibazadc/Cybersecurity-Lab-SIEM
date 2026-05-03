@@ -15,10 +15,10 @@
 
 **Description:** Detects process creation events where the command line contains native PowerShell download methods commonly used to retrieve payloads during the initial access or execution phase of an attack.
 
-**Data Source**
+**Data Source:**
 - Sysmon Event ID 1 (Process Creation)
 
-**Rule**
+**Rule:**
 
 ```xml
 <rule id="100010" level="14">
@@ -31,27 +31,27 @@
 </rule>
 ```
 
-**Test Command**
+**Test Command:**
 
 ```powershell
 Invoke-AtomicTest T1105 -TestNumbers 10
 ```
 
-**Expected Output**
+**Expected Output:**
 
 | Field | Value |
 |-------|-------|
 | Rule ID | 100010 |
-| Level | 14 (Critical) |
-| Group | sysmon_event1, atomic_red_team |
+| Level | 14 |
+| Group | atomic_red_team |
 | MITRE | T1105 - Ingress Tool Transfer |
 | Alert visible in | Wazuh dashboard → Security Events |
 
 **Tuning History**
-Added child suppression rule 100011 to eliminate persistent false positives from `MicrosoftEdgeUpdate.exe`. Edge's update mechanism invokes PowerShell download methods as part of its update check process, matching the detection pattern of this rule.
+- Added child suppression rule 100011 to eliminate persistent false positives from `MicrosoftEdgeUpdate.exe`. The Edge update process generates command line output containing the string `iwr` within an unrelated character sequence.
 
 **Automation**
-Bound to the Shuffle SOAR webhook integration. When fired: SHA256 hash extracted → Cortex queries VirusTotal → TheHive alert created → host isolated via `drop-firewall` if VirusTotal malicious count exceeds 3.
+- Shuffle SOAR webhook integration. When fired: SHA256 hash extracted → Cortex queries VirusTotal → TheHive alert created → host isolated via `drop-firewall` if VirusTotal malicious count exceeds 3.
 
 ---
 
