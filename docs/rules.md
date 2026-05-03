@@ -123,7 +123,7 @@ Invoke-AtomicTest T1547.001 -TestNumbers 1
 | Alert visible in | Wazuh dashboard → Security Events |
 
 **Tuning History**
-- No suppressions added. Legitimate software occasionally writes to Run keys during installation. 
+- No suppressions added. However legitimate software occasionally writes to Run keys during installation.
 - Regex scope is limited to `HKU` to reduce noise from HKLM writes made by system processes during updates.
 
 ---
