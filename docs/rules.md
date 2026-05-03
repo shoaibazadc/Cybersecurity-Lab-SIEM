@@ -72,8 +72,8 @@ Invoke-AtomicTest T1105 -TestNumbers 10
 </rule>
 ```
 
-**Test Command**
-Allow `MicrosoftEdgeUpdate.exe` to run naturally, or trigger rule 100010 via a process with `MicrosoftEdgeUpdate.exe` as the image path. Rule 100011 should fire at level 0, suppressing the alert.
+**Test Command:**
+- Validated by observing suppression during natural MicrosoftEdgeUpdate.exe activity. No synthetic test available.
 
 **Expected Output:**
 
