@@ -130,7 +130,7 @@ Invoke-AtomicTest T1547.001 -TestNumbers 1
 
 ## Rule 100013 - Scheduled Task Creation via Command Line (T1053.005)
 
-**Description:** Detects process creation events where the command line contains scheduled task creation methods. Scheduled tasks created via command line is a strong indicator of attacker-driven persistence or execution scheduling.
+**Description:** Detects process creation events where the command line contains scheduled task creation methods. Scheduled tasks created via command line are a strong indicator of attacker-driven persistence or execution scheduling.
 
 **Data Source:**
 - Sysmon Event ID 1 (Process Creation)
@@ -165,8 +165,8 @@ Invoke-AtomicTest T1053.005 -TestNumbers 1
 | Alert visible in | Wazuh dashboard → Security Events |
 
 **Tuning History**
-- No suppressions added. However, false positive sources include software deployment tools and patch management agents.
-- Future Supressions could include image path or parent process.
+- No suppressions added. Known false positive sources include software deployment tools and patch management agents.
+- Future suppressions would include image path or parent process.
 
 ---
 
