@@ -4,10 +4,10 @@
 
 | Rule ID | Name | MITRE | Level | Automation |
 |---------|------|-------|-------|------------|
-| [100010](#rule-100010--suspicious-powershell-download-t1105) | Suspicious PowerShell Download | T1105 | 14 | Shuffle SOAR pipeline |
-| [100011](#rule-100011--microsoft-edge-update-suppression) | Microsoft Edge Update Suppression | N/A | 0 (Suppressed) | None |
-| [100012](#rule-100012--registry-run-key-modification-t1547001) | Registry Run Key Modification | T1547.001 | 13 | None |
-| [100013](#rule-100013--scheduled-task-creation-via-command-line-t1053005) | Scheduled Task Creation via CLI | T1053.005 | 12 | None |
+| [100010](#rule-100010---suspicious-powershell-download-t1105) | Suspicious PowerShell Download | T1105 | 14 | Shuffle SOAR pipeline |
+| [100011](#rule-100011---microsoft-edge-update-suppression) | Microsoft Edge Update Suppression | N/A | 0 (Suppressed) | None |
+| [100012](#rule-100012---registry-run-key-modification-t1547001) | Registry Run Key Modification | T1547.001 | 13 | None |
+| [100013](#rule-100013---scheduled-task-creation-via-command-line-t1053005) | Scheduled Task Creation via CLI | T1053.005 | 12 | None |
 
 ---
 
