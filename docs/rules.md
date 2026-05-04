@@ -45,7 +45,7 @@ Invoke-AtomicTest T1105 -TestNumbers 10
 | Level | 14 |
 | Group | atomic_red_team |
 | MITRE | T1105 |
-| Alert visible in | Wazuh dashboard → Security Events |
+| Alert visible in | Wazuh dashboard |
 
 **Tuning History**
 - Added child suppression rule 100011 to eliminate persistent false positives from `MicrosoftEdgeUpdate.exe`. The Edge update process generates command line output containing the string `iwr` within an unrelated character sequence.
@@ -120,7 +120,7 @@ Invoke-AtomicTest T1547.001 -TestNumbers 1
 | Level | 13 |
 | Group | atomic_red_team |
 | MITRE | T1547.001 |
-| Alert visible in | Wazuh dashboard → Security Events |
+| Alert visible in | Wazuh dashboard |
 
 **Tuning History**
 - No suppressions added. However, legitimate software occasionally writes to Run keys during installation.
@@ -162,7 +162,7 @@ Invoke-AtomicTest T1053.005 -TestNumbers 1
 | Level | 12 |
 | Group | atomic_red_team |
 | MITRE | T1053.005 |
-| Alert visible in | Wazuh dashboard → Security Events |
+| Alert visible in | Wazuh dashboard |
 
 **Tuning History**
 - No suppressions added. Known false positive sources include software deployment tools and patch management agents.
