@@ -21,7 +21,7 @@ This lab simulates a real-world SOC environment from end-to-end: endpoint teleme
 | Component | Role | Version |
 |-----------|------|---------|
 | **Wazuh** | SIEM / XDR - log ingestion, rule-based detection, alerting | 4.14 |
-| **TheHive** | Case management - incident tracking, observables, analyst collaboration | 5.6 |
+| **TheHive** | Case management - incident tracking and observables | 5.6 |
 | **Cortex** | Observables analysis and enrichment | 4.0 |
 | **Shuffle** | SOAR - workflow automation and tool orchestration | 2.2 |
 | **MISP** | Threat intelligence platform - IOC sharing and feed ingestion | Latest |
