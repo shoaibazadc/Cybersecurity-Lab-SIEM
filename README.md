@@ -154,10 +154,10 @@ Requirements:
 
 ## References
 
-- Wazuh Documentation: https://documentation.wazuh.com
-- TheHive Project: https://thehive-project.org
-- Shuffle SOAR: https://shuffler.io
-- MISP Project: https://www.misp-project.org
-- SwiftOnSecurity Sysmon Config: https://github.com/SwiftOnSecurity/sysmon-config
-- Atomic Red Team: https://github.com/redcanaryco/atomic-red-team
-- MITRE ATT&CK: https://attack.mitre.org
+- [Wazuh Documentation](https://documentation.wazuh.com)
+- [TheHive Project](https://thehive-project.org)
+- [Shuffle SOAR](https://shuffler.io)
+- [MISP Project](https://www.misp-project.org)
+- [SwiftOnSecurity Sysmon Config](https://github.com/SwiftOnSecurity/sysmon-config)
+- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+- [MITRE ATT&CK](https://attack.mitre.org)
